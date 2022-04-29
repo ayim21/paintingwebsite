@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Oxygen", sans-serif, Arial, Helvetica;
+  font-size: 1.5rem;
+  color: #0065FC;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h2,
+h3 {
+  font-size: 3rem;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 15rem;
+  right: auto;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container {
+  padding: 20rem 0 10rem 0;
+}
+
+.active {
+  box-shadow: 0 0.1rem 0 0;
+}
+
+header nav {
+  height: 20rem;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+}
+header nav div {
+  display: flex;
+}
+header nav div img {
+  object-fit: cover;
+  width: 15rem;
+  height: 20rem;
+  padding: 1rem;
+}
+header nav div ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 10rem 7rem 10rem 3rem;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  z-index: 999;
+}
+header nav div ul li {
+  display: block;
+  padding: 0.5rem;
+}
+header nav div ul li a {
+  color: #0065FC;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #f2f2f2;
+  margin-top: 3rem;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+}
+footer nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+footer nav ul a {
+  color: #0065FC;
+  text-decoration: none;
+}
+footer div {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#news {
+  padding: 1.5rem;
+}
+#news article {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+#news article img {
+  object-fit: cover;
+  width: 20%;
+}
+#news article div {
+  padding: 0 5rem;
+  text-align: justify;
+}
+#news article div h3 {
+  text-align: center;
+}
+#news article div p {
+  color: #333538;
+}
+
+#latest div {
+  display: flex;
+  align-items: space-between;
+}
+#latest div img {
+  object-fit: cover;
+}
+#latest div figcaption {
+  text-align: center;
+  color: #333538;
+}
+
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  width: 90vw;
+  margin: 0 auto;
+}
+.grid-images a {
+  text-decoration: none;
+  color: #0065FC;
+}
+.grid-images a figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.grid-images a figure img {
+  object-fit: cover;
+  padding: 1rem;
+}
+.grid-images a figure p {
+  margin: 0;
+}
+
+.painting {
+  display: flex;
+  margin: 0 10rem;
+}
+.painting_visual {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 55vw;
+}
+.painting_visual_mini {
+  max-width: 15%;
+  gap: 0.5rem;
+}
+.painting_visual_mini img {
+  object-fit: cover;
+  width: 90%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.painting_visual_main {
+  margin: 0 1rem;
+}
+.painting_visual_main img {
+  object-fit: cover;
+  width: 95%;
+}
+.painting_info {
+  width: 40vw;
+}
+.painting_info h2 {
+  text-align: left;
+}
+.painting_info p {
+  margin-right: 2.5rem;
+  text-align: justify;
+}
+
+.bio-article {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 0 10rem;
+}
+.bio-article img {
+  object-fit: cover;
+  width: 50%;
+}
+.bio-article div {
+  padding: 0 0 0 5rem;
+  text-align: justify;
+}
+.bio-article div h3 {
+  text-align: center;
+}
+.bio-article div p {
+  color: #333538;
+}
+
+.bio-article:nth-of-type(odd) {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.bio-article:nth-of-type(odd) div {
+  padding: 0 5rem 0 0;
+  text-align: justify;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.contact form input {
+  border: none;
+  border-bottom: 0.1rem solid #cdcdcd;
+  padding: 0.5rem;
+  width: 100%;
+}
+.contact form textarea {
+  border: 0.1rem solid #cdcdcd;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.contact #contact {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rem;
+}
+.contact #contact p {
+  margin: 0;
+  list-style: none;
+}
+.contact #contact p i {
+  padding: 1rem 1.1rem;
+  font-size: 2rem;
+}
+.contact #contact p a {
+  text-decoration: none;
+  color: #0065FC;
+  padding-top: 0.5rem;
+}
+.contact #contact p a i {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

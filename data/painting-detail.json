@@ -1,0 +1,43 @@
+{
+    "paintings": [
+        {
+            "id": 1,
+            "title": "test01",
+            "img": "test01.jpg",
+            "imgText": "painting details",
+            "description": "Aut molestiae velit quo voluptatibus repudiandae et galisum quisquam aut temporibus molestiae aut aspernatur molestiae aut asperiores dolores. Id debitis dolor ad expedita sint qui sapiente quia qui officia quasi in dolorem voluptas.",
+            "hoverImg": "test04.jpg",
+            "dimension": "100x300",
+            "miniature1": "test01.jpg",
+            "miniature2": "test02.jpg",
+            "miniature3": "test03.jpg",
+            "miniature4": "test04.jpg"
+        },
+        {
+            "id": 2,
+            "title": "test02",
+            "img": "test02.jpg",
+            "imgText": "painting details",
+            "description": "Aut molestiae velit quo voluptatibus repudiandae et galisum quisquam aut temporibus molestiae aut aspernatur molestiae aut asperiores dolores. Id debitis dolor ad expedita sint qui sapiente quia qui officia quasi in dolorem voluptas.",
+            "hoverImg": "test04.jpg",
+            "dimension": "400x300",
+            "miniature1": "test02.jpg",
+            "miniature2": "test01.jpg",
+            "miniature3": "test03.jpg",
+            "miniature4": "test04.jpg"
+        },
+        {
+            "id": 3,
+            "title": "test03",
+            "img": "test03.jpg",
+            "imgText": "painting details",
+            "description": "Aut molestiae velit quo voluptatibus repudiandae et galisum quisquam aut temporibus molestiae aut aspernatur molestiae aut asperiores dolores. Id debitis dolor ad expedita sint qui sapiente quia qui officia quasi in dolorem voluptas.",
+            "hoverImg": "test04.jpg",
+            "dimension": "500x300",
+            "miniature1": "test03.jpg",
+            "miniature2": "test01.jpg",
+            "miniature3": "test02.jpg",
+            "miniature4": "test04.jpg"
+        }
+    ]
+}
