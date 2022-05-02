@@ -29,20 +29,23 @@
     <main class="container">
         <h2>Contact Me</h2>
         <div class="contact">
-            <form action="https://formsubmit.co/website@name.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <p>Last Name: <input type="text" name="lastname" /></p>
-                <p>First Name: <input type="text" name="firstname" /></p>
-                <p>Email: <input type="text" name="email" /></p>
-                <p>
+            <form action="" method="POST">
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" id="lastName" required/>
+                <p id="lastNameErr" class="errormsg"></p><br/>
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName" id="firstName" required/>
+                <p id="firstNameErr" class="errormsg"></p><br/>
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email" required/>
+                <p id="emailErr" class="errormsg"></p><br/>
+                <label for="comments">
                     Message:
-                    <textarea name="comments" rows="12" cols="35" placeholder="Your message here"></textarea>
-                </p>
-
-                
-                    <button type="submit">Send</button>
-                    <button type="reset">Clear Form</button>
-                
+                    <textarea name="comments" id="comments" rows="12" cols="35" placeholder="Your message" required></textarea>
+                </label>
+                <p id="submitErr" class="errormsg"></p><br/>
+                <button id="sendform" type="submit">Send</button>
+                <button type="reset">Clear All</button>
             </form>
             <div id="contact">
                 <p><i class="fas fa-mobile-alt"></i><span>88 88 88 88 88</span></p>
@@ -54,18 +57,11 @@
     </main>
 
     <footer>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./portfolio.html">Portfolio</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li class="active">Contact</li>
-            </ul>
-        </nav>
         <div>
             <small>Copyright 2022 | All rights reserved</small>
         </div>
     </footer>
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>

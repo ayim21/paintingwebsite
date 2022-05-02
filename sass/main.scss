@@ -56,6 +56,7 @@ h2 {
 header {
     & nav {
         height: 20rem;
+        margin-top: .5rem;
         position: fixed;
         top: 0;
         bottom: auto;
@@ -125,7 +126,7 @@ footer {
 }
 
 
-//PAGE ACCUEIL
+//HOME PAGE
 
 #news {
     padding: 1.5rem;
@@ -173,7 +174,7 @@ footer {
 }
 
 
-//PAGE CATALOGUE
+//PORTFOLIO PAGE
 
 .grid-images {
     display: grid;
@@ -204,7 +205,7 @@ footer {
     }
 }
 
-//PAGE PRODUIT SEUL
+//SINGLE PAINTING PAGE
 
 .painting {
     display: flex;
@@ -253,7 +254,7 @@ footer {
 }
 
 
-//PAGE BIOGRAPHIE
+//ABOUT PAGE
 
 .bio-article {
     padding: 1.5rem;
@@ -293,21 +294,25 @@ footer {
 }
 
 
-//PAGE CONTACT
+//CONTACT PAGE
 .contact {
     display: flex;
     justify-content: center;
     align-items: baseline;
+    width: 90%;
+    margin: 0 auto;
     & form {
+        width: 70%;
         & input {
             border: none;
             border-bottom: .1rem solid #cdcdcd;
             padding: .5rem;
+            margin: 0 0 1.5rem 0;
             width: 100%;
         }
         & textarea {
             border: .1rem solid #cdcdcd;
-            margin: .5rem 0;
+            margin: 1.5rem 0;
             width: 100%;
         }
     }
