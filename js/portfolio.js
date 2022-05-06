@@ -13,10 +13,10 @@ const paintingsCatalog = () => {
             anchor.innerHTML = 
             `<figure>
                 <img 
-                    src="../assets/${data.paintings[i].img}" 
+                    src="../assets/${data.paintings[i].id}/${data.paintings[i].img}" 
                     alt="${data.paintings[i].imgText}"
-                    onmouseover="this.src='../assets/${data.paintings[i].hoverImg}'"
-                    onmouseout="this.src='../assets/${data.paintings[i].img}'"
+                    onmouseover="this.src='../assets/${data.paintings[i].id}/${data.paintings[i].hoverImg}'"
+                    onmouseout="this.src='../assets/${data.paintings[i].id}/${data.paintings[i].img}'"
                 />
                 <figcaption>${data.paintings[i].title}</figcaption>
                 <p>${data.paintings[i].dimension}</p>

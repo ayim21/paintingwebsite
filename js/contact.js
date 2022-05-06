@@ -68,11 +68,13 @@ msgForm.email.addEventListener('change', () => {
 
 /* SUBMIT FORM */
 msgForm.addEventListener('submit', (event) => {
-   if (!validFirstName(msgForm.firstName) 
+    event.preventDefault();
+    if (!validFirstName(msgForm.firstName) 
             || !validLastName(msgForm.lastName) 
             || !validEmail(msgForm.email)
             || msgForm.comments.value == '') {
         alert('Please fill in all fields.')
-        event.preventDefault();
+    } else { 
+        document.querySelector('#submitMsg').innerText = 'Message sent!';
     }
 })

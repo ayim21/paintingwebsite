@@ -13,16 +13,16 @@ const retrievePaintingData = () =>
 
 const insertPaintingDetail = paintingData => {
         //BLOCK painting_visual_mini - insert mini images
-        document.querySelector('#visual1').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature1}`);
+        document.querySelector('#visual1').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature1}`);
         document.querySelector('#visual1').setAttribute('alt', `${paintingData[paintingId-1].imgText}`);
-        document.querySelector('#visual2').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature2}`);
+        document.querySelector('#visual2').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature2}`);
         document.querySelector('#visual2').setAttribute('alt', `${paintingData[paintingId-1].imgText}`);
-        document.querySelector('#visual3').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature3}`);
+        document.querySelector('#visual3').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature3}`);
         document.querySelector('#visual3').setAttribute('alt', `${paintingData[paintingId-1].imgText}`);
-        document.querySelector('#visual4').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature4}`);
+        document.querySelector('#visual4').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature4}`);
         document.querySelector('#visual4').setAttribute('alt', `${paintingData[paintingId-1].imgText}`);
         //BLOCK painting_visual_main - insert main image
-        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].img}`);
+        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].img}`);
         document.querySelector('#mainvisual').setAttribute('alt', `${paintingData[paintingId-1].imgText}`);
         //BLOCK painting_info
         document.querySelector('h2').innerHTML = `${paintingData[paintingId-1].title}`;
@@ -33,19 +33,19 @@ const insertPaintingDetail = paintingData => {
 
 const zoomIn = paintingData => {
     document.querySelector('#visual1').addEventListener('click', () => {
-        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature1}`);
+        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature1}`);
     });
 
     document.querySelector('#visual2').addEventListener('click', () => {
-        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature2}`);
+        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature2}`);
     })
 
     document.querySelector('#visual3').addEventListener('click', () => {
-        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature3}`);
+        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature3}`);
     })
 
     document.querySelector('#visual4').addEventListener('click', () => {
-        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].miniature4}`);
+        document.querySelector('#mainvisual').setAttribute('src', `../assets/${paintingData[paintingId-1].id}/${paintingData[paintingId-1].miniature4}`);
     })
 };
 

@@ -28,6 +28,7 @@ body {
 h2,
 h3 {
     font-size: 3rem;
+    margin: 0;
 }
 
 h1 {
@@ -35,9 +36,9 @@ h1 {
     font-size: 3.5rem;
     position: absolute;
     top: 0;
-    bottom: auto;
-    left: 15rem;
-    right: auto;
+    bottom: 0;
+    left: 13.5rem;
+    right: 0;
 }
 
 h2 {
@@ -45,8 +46,13 @@ h2 {
     text-transform: uppercase;
 }
 
+p {
+    line-height: 1.2;
+}
+
 .container {
-    padding: 20rem 0 10rem 0;
+    padding: 12.5rem 0 1.5rem 0;
+    margin: 0 14rem;
 }
 
 .active {
@@ -55,37 +61,42 @@ h2 {
 
 header {
     & nav {
-        height: 20rem;
-        margin-top: .5rem;
+        height: 18rem;
         position: fixed;
         top: 0;
-        bottom: auto;
+        bottom: 0;
         right: 0;
         left: 0;
         background-color: white;
         z-index: 999;
+
         & div {
             display: flex;
+            margin-top: .5rem;
+            height: 10rem;
+
             & img {
                 object-fit: cover;
-                width: 15rem;
-                height: 20rem;
-                padding: 1rem;
+                height: 15rem;
+                padding: .5rem 1rem;
             }
+
             & ul {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 list-style: none;
                 padding: 0;
-                margin: 10rem 7rem 10rem 3rem;
+                margin: 10rem 10rem 10rem .5rem;
                 width: 100%;
                 text-transform: uppercase;
-                font-size: 1.8rem;
+                font-size: 2rem;
                 z-index: 999;
+
                 & li {
                     display: block;
-                    padding: .5rem;
+                    margin: .5rem;
+
                     & a {
                         color: $color-primary;
                         text-decoration: none;
@@ -97,7 +108,6 @@ header {
 }
 
 footer {
-    background-color: $color-background;
     margin-top: 3rem;
 
     & nav {
@@ -129,13 +139,16 @@ footer {
 //HOME PAGE
 
 #news {
-    padding: 1.5rem;
+    margin: 1rem 0 1.5rem 0;
+
+    & h2 {
+        margin: 5rem 0;
+    }
 
     & article {
         display: flex;
-        //flex-direction: column;
-        align-items: center;
-        padding: 1.5rem;
+        align-items: flex-start;
+        margin: 2rem 0;
 
         & img {
             object-fit: cover;
@@ -143,11 +156,12 @@ footer {
         }
 
         & div {
-            padding: 0 5rem;
+            margin-left: 5rem;
             text-align: justify;
 
             & h3 {
                 text-align: center;
+                padding-bottom: 1.5rem;
             }
 
             & p {
@@ -158,17 +172,33 @@ footer {
 }
 
 #latest {
+    margin: 1rem 0 1.5rem 0;
+
+    & h2 {
+        margin: 5rem 0;
+    }
+
     & div {
-        display: flex;
-        align-items: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+        margin-top: 1.5rem;
 
-        & img {
-            object-fit: cover;
-        }
+        & a {
+            text-decoration: none;
 
-        & figcaption {
-            text-align: center;
-            color: $color-text;
+            & figure {
+                margin: 0;
+
+                & img {
+                    object-fit: cover;
+                }
+
+                & figcaption {
+                    text-align: center;
+                    color: $color-text;
+                }
+            }
         }
     }
 }
@@ -180,8 +210,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem;
-    width: 90vw;
-    margin: 0 auto;
+    margin-top: 3rem;
 
     & a {
         text-decoration: none;
@@ -209,12 +238,12 @@ footer {
 
 .painting {
     display: flex;
-    margin: 0 10rem;
+    margin: 7rem 14rem 0 14rem;
 
     &_visual {
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-start;
         width: 55vw;
 
         &_mini {
@@ -234,7 +263,7 @@ footer {
 
             & img {
                 object-fit: cover;
-                width: 95%;
+                width: 87.5%;
             }
         }
     }
@@ -244,6 +273,7 @@ footer {
 
         & h2 {
             text-align: left;
+            margin-top: 0;
         }
 
         & p {
@@ -257,32 +287,31 @@ footer {
 //ABOUT PAGE
 
 .bio-article {
-    padding: 1.5rem;
     display: flex;
     align-items: center;
-    margin: 0 10rem;
+    margin: 3rem 5rem 1.5rem 5rem;
 
     & img {
         object-fit: cover;
-        width: 50%;
+        width: 35%;
     }
 
     & div {
         padding: 0 0 0 5rem;
         text-align: justify;
 
-        & h3 {
+        & h2 {
             text-align: center;
         }
 
         & p {
             color: $color-text;
+            line-height: 1.4;
         }
     }
 }
 
 .bio-article:nth-of-type(odd) {
-    padding: 1.5rem;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -295,14 +324,19 @@ footer {
 
 
 //CONTACT PAGE
+#contactcall {
+    margin: 5rem 0;
+}
+
 .contact {
     display: flex;
     justify-content: center;
     align-items: baseline;
     width: 90%;
-    margin: 0 auto;
+
     & form {
-        width: 70%;
+        width: 50%;
+
         & input {
             border: none;
             border-bottom: .1rem solid #cdcdcd;
@@ -310,16 +344,18 @@ footer {
             margin: 0 0 1.5rem 0;
             width: 100%;
         }
+
         & textarea {
             border: .1rem solid #cdcdcd;
             margin: 1.5rem 0;
             width: 100%;
         }
     }
+
     & #contact {
         display: flex;
         flex-direction: column;
-        padding-left: 10rem;
+        padding-left: 5rem;
 
         & p {
             margin: 0;
@@ -341,5 +377,240 @@ footer {
                 }
             }
         }
+    }
+}
+
+/////////////////////////////////////
+/*          MEDIA QUERIES          */
+/////////////////////////////////////
+@media only screen and (max-width: 991px) {
+    .container {
+        margin: 0 7rem;
+    }
+
+    //PAGE ACCUEIL
+    #news {
+        & article {
+            & img {
+                width: 50%;
+            }
+
+            & div {
+                margin-left: 2.5rem;
+            }
+        }
+    }
+
+    //PAGE CATALOGUE
+    .grid-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    //PAGE BIOGRAPHIE
+    .bio-article {
+        margin: 10rem 0 1rem 0;
+        padding: 0 0 0 2.5rem;
+
+        &:nth-of-type(odd) {
+            padding: 0 2.5rem 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        & nav {
+            & div {
+                & ul {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    //PAGE ACCUEIL
+    #news {
+        padding: 0;
+
+        & article {
+            flex-direction: column;
+            align-items: center;
+
+            & img {
+                width: 100%;
+            }
+
+            & div {
+                padding: 2.5rem 0;
+                margin: 0;
+            }
+        }
+    }
+
+    #latest {
+        & div {
+            grid-gap: .5rem;
+        }
+    }
+
+    //PAGE CATALOGUE
+    .grid-images {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 3rem auto;
+    }
+
+    //PAGE PRODUIT SEUL
+    .painting {
+        flex-direction: column;
+        align-items: center;
+        margin: 7rem 7rem 0 7rem;
+
+        &_visual {
+            width: 100%;
+
+            &_main {
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &_info {
+            width: 100%;
+            margin: 1.5rem 0;
+
+            & h2 {
+                text-align: center;
+            }
+        }
+    }
+
+    //PAGE BIOGRAPHIE
+    .bio-article {
+        flex-direction: column;
+
+        &:nth-of-type(odd) {
+            flex-direction: column;
+
+            & div {
+                padding: 2rem 0;
+            }
+        }
+
+        & img {
+            width: 80%;
+        }
+
+        & div {
+            padding: 2rem 0;
+        }
+    }
+
+    //PAGE CONTACT
+    .contact {
+        flex-direction: column;
+        align-items: unset;
+
+        & form {
+            width: 80%;
+        }
+
+        & #contact {
+            padding: 0;
+            margin: 2rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        & nav {
+            height: 16rem;
+
+            & h1 {
+                font-size: 3rem;
+                line-height: .5;
+                top: 1rem;
+                bottom: 0;
+                left: 12.5rem;
+                right: 0;
+
+                & span {
+                    font-size: .9rem;
+                }
+            }
+
+            & div {
+                & img {
+                    height: 15rem;
+                }
+
+                & ul {
+                    font-size: 1.2rem;
+                    margin: 10rem 7rem 10rem 0;
+
+                    & li {
+                        margin: 0.5rem 1rem 0.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        margin: 0 2rem;
+        padding: 15rem 0 1.5rem 0;
+    }
+
+    //PAGE ACCUEIL
+    #news {
+        & article {
+            padding: 0;
+        }
+    }
+
+    #latest {
+        & div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    //PAGE CATALOGUE
+    .grid-images {
+        margin: 0;
+        width: 100%;
+        margin: 0;
+        padding: 15rem .5rem 1.5rem .5rem;
+    }
+
+    //PRODUIT SEUL
+    .painting {
+        &_visual {
+            padding-top: 1rem;
+        }
+
+        &_info {
+            width: 100%;
+            margin-left: 11rem;
+        }
+    }
+
+    //PAGE BIOGRAPHIE
+    .bio-article {
+        padding: 0;
+
+        &:nth-of-type(odd) {
+
+            padding: 0;
+
+        }
+
+        & img {
+            width: 80%;
+        }
+
     }
 }
